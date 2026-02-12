@@ -1,0 +1,5 @@
+{
+  "name": "OptiPresta - Extracteur Intelligent de Fiches",
+  "description": "Une application intelligente pour extraire les données opérationnelles des fiches de prestations événementielles et les mapper automatiquement vers un planning hebdomadaire structuré.",
+  "requestFramePermissions": []
+}

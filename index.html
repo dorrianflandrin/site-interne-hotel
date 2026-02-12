@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiPresta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        @media print {
+            .no-print, 
+            aside, 
+            button, 
+            nav, 
+            header,
+            .sidebar,
+            [role="navigation"] { 
+                display: none !important; 
+            }
+
+            html, body, #root {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            main {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                max-width: none !important;
+                display: block !important;
+            }
+
+            @page {
+                size: A4 landscape;
+                margin: 1cm;
+            }
+
+            .break-after-page {
+                display: block !important;
+                page-break-after: always !important;
+                break-after: page !important;
+                border: 1px solid #e2e8f0 !important;
+                box-shadow: none !important;
+                margin-bottom: 0 !important;
+                padding: 1.5cm !important;
+                width: 100% !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            h2, h3, h4, p, span, td, th {
+                color: black !important;
+            }
+            
+            .text-emerald-700 { color: #047857 !important; }
+            .bg-emerald-50 { background-color: #ecfdf5 !important; }
+            .bg-slate-900 { background-color: #0f172a !important; color: white !important; }
+            
+            .shadow-md, .shadow-xl, .shadow-sm {
+                box-shadow: none !important;
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "xlsx": "https://esm.sh/xlsx@0.18.5"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+</body>
+</html>
